@@ -4,7 +4,72 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog - Proyek Saya</title>
-    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 1em;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin: 0;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 2em auto;
+            padding: 2em;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        article {
+            margin-bottom: 2em;
+        }
+
+        article:hover {
+            background-color: #e0e0e0;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        h3 {
+            color: #2c3e50;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1em;
+            background-color: #333;
+            color: white;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -21,21 +86,35 @@
     <main>
         <section>
             <h2>Bolalob Indonesia</h2>
-            <article>
+            <article onclick="highlightArticle(this)">
                 <h3>Patrick Kluivert Tiba, Awal Era Baru Timnas Indonesia </h3>
                 <p>Era baru pelatih tim nasional Indonesia telah resmi dimulai seiring kedatangan Patrick Kluivert di Jakarta, Sabtu (11/1/2025) malam. Kluivert akan diperkenalkan secara resmi sebagai juru taktik anyar skuad ”Garuda” pada Minggu (12/1/2025) sore bersama dua asistennya, Alex Pastoor dan Denny Landzaat.</p>
             </article>
-            <article>
+            <article onclick="highlightArticle(this)">
                 <h3>Patrick Kluivert Segera Umumkan Skuad Timnas Indonesia, Kualifikasi Piala Dunia 2026</h3>
                 <p>Pengumuman daftar pemain Timnas Indonesia untuk ronde laga Kualifikasi Piala Dunia 2026 semakin dekat. Kali ini, Patrick Kluivert akan mengumumkan skuadnya untuk pertama kali sejak ditunjuk sebagai pelatih Timnas Indonesia pada Januari 2025, menggantikan Shin Tae-yong. Publik antusias menanti daftar pemain yang dipilih Kluivert, mengingat ini menjadi langkah awal sang pelatih dalam membentuk tim impiannya.</p>
             </article>
-            <article>
+            <article onclick="highlightArticle(this)">
                 <h3>Alasan Kluivert Tunjuk Vanenburg Jadi Asisten Pelatih Timnas Indonesia</h3>
                 <p>Legenda sepak bola Belanda Gerald Vanenburg resmi menjadi asisten pelatih Timnas Indonesia yang akan membantu tugas Patrick Kluivert sebagai pelatih kepala.Selain menjabat sebagai asisten pelatih di timnas senior, Gerald Vanenburg juga ditunjuk menjadi pelatih kepala Timnas Indonesia U-23. Pelatih Timnas Indonesia Patrick Kluivert menilai Gerald Vanenburg memiliki pengalaman yang luas sebagai pelatih dan pemain.</p>
             </article>
         </section>
     </main>
     <footer>
+        &copy; 2025 Proyek Saya. Semua hak dilindungi.
     </footer>
+
+    <script>
+        window.onload = function() {
+            alert("Selamat datang di Blog Proyek Saya!");
+        };
+
+        function highlightArticle(articleElement) {
+            articleElement.style.backgroundColor = '#ffeb3b'; 
+            setTimeout(function() {
+                articleElement.style.backgroundColor = ''; 
+            }, 2000);
+        }
+    </script>
 </body>
 </html>
